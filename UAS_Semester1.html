@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+
+     <link rel="stylesheet" href="UAS_Semester1.css">
+
+</head>
+<body style="background-color: #111;">
+      <!--Banner-->
+    <div style="
+    background: linear-gradient(135deg, #0a192f, #1a365d);
+    text-align: center;
+    padding: 15px 0;                     /* DARI 22px JADI 15px (lebih compact) */
+    border-bottom: 3px solid #1e90ff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+">
+    <!-- LOGO LEBIH BESAR -->
+    <img src="logobaru.png" 
+         alt="KITZULIST" 
+         style="height: 75px; width: auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));">
+    
+    <!-- SUBTITLE TETAP SAMA (ANIME VIBES) -->
+    <div style="
+        display: inline-block;
+        margin-top: 8px;
+        padding: 4px 15px;
+        background: rgba(30, 144, 255, 0.1);
+        border-radius: 12px;
+        border: 1px solid rgba(30, 144, 255, 0.3);
+    ">
+        <span style="color: #00bfff; font-size: 14px;">✦</span>
+        <span style="color: white; font-size: 13px; margin: 0 8px;">Anime Cinema Universe</span>
+        <span style="color: #00bfff; font-size: 14px;">✦</span>
+    </div>
+</div>
+    <!--Banner-->
+      <nav>
+        <div class="">
+            <img src="Raposa guerreira.jpg" alt="logo">
+        </div>
+        <ul>
+           <ul>
+            <li>
+                <a href="index.html">home</a>
+            </li>
+            <li>
+                <a href="kimi_no_nawa.html">Page 1</a>
+            </li>
+            <li>
+                <a href="tenki_no_ko.html">Page 2</a>
+            </li>
+            <li>
+                <a href="SUZUME.html">Page 3</a>
+            </li>
+          <li>
+                <a href="the_garden_of_words.html">Page 4</a>
+            </li>
+             <li>
+                <a href="5cmpersecond.html">Page 5</a>
+            </li>
+        </ul>
+    </nav>
+    <!--content-->
+    <div style="text-align: center; padding: 40px 20px; background: rgba(0,0,0,0.2); border-radius: 15px; margin: 40px 0;">
+    <h2 style="color: white; font-size: 28px; margin-bottom: 30px;">🎬 5 Karya Terkenal Makoto Shinkai</h2>
+    
+    <!-- GRID CONTAINER -->
+    <div style="
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 25px;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 20px;
+    ">
+        
+        <!-- FILM 1: YOUR NAME -->
+        <div style="
+            text-align: center; 
+            background: rgba(255,255,255,0.05); 
+            padding: 15px; 
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        " onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 10px 25px rgba(30, 144, 255, 0.3)';" 
+           onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+            
+            <a href="kimi_no_nawa.html" style="text-decoration: none; display: block;">
+                <img src="Kimi no na Wa.jpg" 
+                     style="
+                         width: 100%; 
+                         height: 280px; 
+                         object-fit: cover; 
+                         border-radius: 8px; 
+                         border: 2px solid #1e90ff; 
+                         margin-bottom: 10px;
+                         transition: all 0.3s ease;
+                     " 
+                     onmouseover="this.style.transform='scale(1.05)'; this.style.borderColor='#ffd700';"
+                     onmouseout="this.style.transform='scale(1)'; this.style.borderColor='#1e90ff';">
+            </a>
+            
+            <h3 style="color: #1e90ff; margin: 5px 0; font-size: 18px; transition: color 0.3s;" 
+                onmouseover="this.style.color='#ffd700'" 
+                onmouseout="this.style.color='#1e90ff'">
+                Your Name
+            </h3>
+            
+            <p style="color: white; margin: 2px 0; font-size: 14px; font-weight: bold;">君の名は。</p>
+            <p style="color: #ccc; margin: 2px 0; font-size: 12px;">Kimi no Na wa.</p>
+            
+            <div style="margin: 8px 0;">
+                <span style="color: #ffd700; font-size: 18px;">★★★★★</span>
+                <span style="color: #aaa; font-size: 12px; margin-left: 5px;">4.8</span>
+            </div>
+            
+            <p style="color: #1e90ff; margin: 5px 0; font-size: 14px; font-weight: bold; transition: color 0.3s;"
+               onmouseover="this.style.color='#ffd700'" 
+               onmouseout="this.style.color='#1e90ff'">
+                2016
+            </p>
+        </div>
+        
+        <!-- FILM 2: WEATHERING WITH YOU -->
+        <div style="
+            text-align: center; 
+            background: rgba(255,255,255,0.05); 
+            padding: 15px; 
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        " onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 10px 25px rgba(30, 144, 255, 0.3)';" 
+           onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+            
+            <a href="tenki_no_ko.html" style="text-decoration: none; display: block;">
+                <img src="Tenki no Ko.jpg" 
+                     style="
+                         width: 100%; 
+                         height: 280px; 
+                         object-fit: cover; 
+                         border-radius: 8px; 
+                         border: 2px solid #1e90ff; 
+                         margin-bottom: 10px;
+                         transition: all 0.3s ease;
+                     " 
+                     onmouseover="this.style.transform='scale(1.05)'; this.style.borderColor='#ffd700';"
+                     onmouseout="this.style.transform='scale(1)'; this.style.borderColor='#1e90ff';">
+            </a>
+            
+            <h3 style="color: #1e90ff; margin: 5px 0; font-size: 18px; transition: color 0.3s;" 
+                onmouseover="this.style.color='#ffd700'" 
+                onmouseout="this.style.color='#1e90ff'">
+                Weathering With You
+            </h3>
+            
+            <p style="color: white; margin: 2px 0; font-size: 14px; font-weight: bold;">天気の子</p>
+            <p style="color: #ccc; margin: 2px 0; font-size: 12px;">Tenki no Ko</p>
+            
+            <div style="margin: 8px 0;">
+                <span style="color: #ffd700; font-size: 18px;">★★★★☆</span>
+                <span style="color: #aaa; font-size: 12px; margin-left: 5px;">4.6</span>
+            </div>
+            
+            <p style="color: #1e90ff; margin: 5px 0; font-size: 14px; font-weight: bold; transition: color 0.3s;"
+               onmouseover="this.style.color='#ffd700'" 
+               onmouseout="this.style.color='#1e90ff'">
+                2019
+            </p>
+        </div>
+        
+        <!-- FILM 3: SUZUME -->
+        <div style="
+            text-align: center; 
+            background: rgba(255,255,255,0.05); 
+            padding: 15px; 
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        " onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 10px 25px rgba(30, 144, 255, 0.3)';" 
+           onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+            
+            <a href="SUZUME.html" style="text-decoration: none; display: block;">
+                <img src="Suzume No Tojimari.jpg" 
+                     style="
+                         width: 100%; 
+                         height: 280px; 
+                         object-fit: cover; 
+                         border-radius: 8px; 
+                         border: 2px solid #1e90ff; 
+                         margin-bottom: 10px;
+                         transition: all 0.3s ease;
+                     " 
+                     onmouseover="this.style.transform='scale(1.05)'; this.style.borderColor='#ffd700';"
+                     onmouseout="this.style.transform='scale(1)'; this.style.borderColor='#1e90ff';">
+            </a>
+            
+            <h3 style="color: #1e90ff; margin: 5px 0; font-size: 18px; transition: color 0.3s;" 
+                onmouseover="this.style.color='#ffd700'" 
+                onmouseout="this.style.color='#1e90ff'">
+                Suzume
+            </h3>
+            
+            <p style="color: white; margin: 2px 0; font-size: 14px; font-weight: bold;">すずめの戸締まり</p>
+            <p style="color: #ccc; margin: 2px 0; font-size: 12px;">Suzume no Tojimari</p>
+            
+            <div style="margin: 8px 0;">
+                <span style="color: #ffd700; font-size: 18px;">★★★★☆</span>
+                <span style="color: #aaa; font-size: 12px; margin-left: 5px;">4.5</span>
+            </div>
+            
+            <p style="color: #1e90ff; margin: 5px 0; font-size: 14px; font-weight: bold; transition: color 0.3s;"
+               onmouseover="this.style.color='#ffd700'" 
+               onmouseout="this.style.color='#1e90ff'">
+                2022
+            </p>
+        </div>
+        
+        <!-- FILM 4: THE GARDEN OF WORDS -->
+        <div style="
+            text-align: center; 
+            background: rgba(255,255,255,0.05); 
+            padding: 15px; 
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        " onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 10px 25px rgba(30, 144, 255, 0.3)';" 
+           onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+            
+            <a href="the_garden_of_words.html" style="text-decoration: none; display: block;">
+                <img src="The garden of words (2013) - Makoto Shinkai.jpg" 
+                     style="
+                         width: 100%; 
+                         height: 280px; 
+                         object-fit: cover; 
+                         border-radius: 8px; 
+                         border: 2px solid #1e90ff; 
+                         margin-bottom: 10px;
+                         transition: all 0.3s ease;
+                     " 
+                     onmouseover="this.style.transform='scale(1.05)'; this.style.borderColor='#ffd700';"
+                     onmouseout="this.style.transform='scale(1)'; this.style.borderColor='#1e90ff';">
+            </a>
+            
+            <h3 style="color: #1e90ff; margin: 5px 0; font-size: 18px; transition: color 0.3s;" 
+                onmouseover="this.style.color='#ffd700'" 
+                onmouseout="this.style.color='#1e90ff'">
+                The Garden of Words
+            </h3>
+            
+            <p style="color: white; margin: 2px 0; font-size: 14px; font-weight: bold;">言の葉の庭</p>
+            <p style="color: #ccc; margin: 2px 0; font-size: 12px;">Kotonoha no Niwa</p>
+            
+            <div style="margin: 8px 0;">
+                <span style="color: #ffd700; font-size: 18px;">★★★★★</span>
+                <span style="color: #aaa; font-size: 12px; margin-left: 5px;">4.7</span>
+            </div>
+            
+            <p style="color: #1e90ff; margin: 5px 0; font-size: 14px; font-weight: bold; transition: color 0.3s;"
+               onmouseover="this.style.color='#ffd700'" 
+               onmouseout="this.style.color='#1e90ff'">
+                2013
+            </p>
+        </div>
+        
+        <!-- FILM 5: 5 CENTIMETERS PER SECOND -->
+        <div style="
+            text-align: center; 
+            background: rgba(255,255,255,0.05); 
+            padding: 15px; 
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        " onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 10px 25px rgba(30, 144, 255, 0.3)';" 
+           onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+            
+            <a href="5cmpersecond.html" style="text-decoration: none; display: block;">
+                <img src="5cm.jpg" 
+                     style="
+                         width: 100%; 
+                         height: 280px; 
+                         object-fit: cover; 
+                         border-radius: 8px; 
+                         border: 2px solid #1e90ff; 
+                         margin-bottom: 10px;
+                         transition: all 0.3s ease;
+                     " 
+                     onmouseover="this.style.transform='scale(1.05)'; this.style.borderColor='#ffd700';"
+                     onmouseout="this.style.transform='scale(1)'; this.style.borderColor='#1e90ff';">
+            </a>
+            
+            <h3 style="color: #1e90ff; margin: 5px 0; font-size: 18px; transition: color 0.3s;" 
+                onmouseover="this.style.color='#ffd700'" 
+                onmouseout="this.style.color='#1e90ff'">
+                5 Centimeters Per Second
+            </h3>
+            
+            <p style="color: white; margin: 2px 0; font-size: 14px; font-weight: bold;">秒速５センチメートル</p>
+            <p style="color: #ccc; margin: 2px 0; font-size: 12px;">Byōsoku Go Senchimētoru</p>
+            
+            <div style="margin: 8px 0;">
+                <span style="color: #ffd700; font-size: 18px;">★★★★★</span>
+                <span style="color: #aaa; font-size: 12px; margin-left: 5px;">4.8</span>
+            </div>
+            
+            <p style="color: #1e90ff; margin: 5px 0; font-size: 14px; font-weight: bold; transition: color 0.3s;"
+               onmouseover="this.style.color='#ffd700'" 
+               onmouseout="this.style.color='#1e90ff'">
+                2007
+            </p>
+        </div>
+        
+    </div>
+    
+    <!-- CATATAN KECIL -->
+    <p style="color: #aaa; font-size: 12px; margin-top: 20px;">
+        <span style="color: #ffd700;">★</span> = Rating berdasarkan IMDb & MyAnimeList | 
+        <span style="color: #1e90ff;">Hover untuk efek interaktif</span>
+    </p>
+</div>
+    <!--content-->
+    <center>
+<footer style="
+    background: #f5f5f5;
+    color: #111;
+    text-align: center;
+    padding: 15px;
+">
+
+    <!-- Widget Waktu -->
+    <div style="margin-bottom: 8px;">
+        <div style="
+            display: inline-block;
+            padding: 6px 18px;
+            background: #1e90ff;
+            color: white;
+            border-radius: 6px;
+            font-weight: 500;
+        ">
+            <span id="simple-clock">
+                Loading waktu...
+            </span>
+        </div>
+    </div>
+
+    © Muhammad Faldo Al Rosyid (251011700301)
+
+    <script>
+        function updateSimpleClock() {
+            var waktu = new Date();
+
+            var jam = waktu.getHours().toString().padStart(2, '0');
+            var menit = waktu.getMinutes().toString().padStart(2, '0');
+
+            var tanggal = waktu.getDate() + "/" + 
+                          (waktu.getMonth() + 1) + "/" + 
+                          waktu.getFullYear();
+
+            document.getElementById("simple-clock").innerHTML =
+                tanggal + " | " + jam + ":" + menit;
+        }
+
+        updateSimpleClock();
+        setInterval(updateSimpleClock, 30000);
+    </script>
+</footer>
+    </center>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>KITZULIST</title>
+       <link rel="stylesheet" href="UAS_Semester1.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!--Banner-->
+    <div style="
+    background: linear-gradient(135deg, #0a192f, #1a365d);
+    text-align: center;
+    padding: 15px 0;                     /* DARI 22px JADI 15px (lebih compact) */
+    border-bottom: 3px solid #1e90ff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+">
+    <!-- LOGO LEBIH BESAR -->
+    <img src="logobaru.png" 
+         alt="KITZULIST" 
+         style="height: 75px; width: auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));">
+    
+    <!-- SUBTITLE TETAP SAMA (ANIME VIBES) -->
+    <div style="
+        display: inline-block;
+        margin-top: 8px;
+        padding: 4px 15px;
+        background: rgba(30, 144, 255, 0.1);
+        border-radius: 12px;
+        border: 1px solid rgba(30, 144, 255, 0.3);
+    ">
+        <span style="color: #00bfff; font-size: 14px;">✦</span>
+        <span style="color: white; font-size: 13px; margin: 0 8px;">Anime Cinema Universe</span>
+        <span style="color: #00bfff; font-size: 14px;">✦</span>
+    </div>
+</div>
+    <!--Banner-->
+    <!-- NAVBAR -->
+     <nav>
+        <div class="">
+            <img src="Raposa guerreira.jpg" alt="logo">
+        </div>
+        <ul>
+            <li>
+                <a href="index.html">home</a>
+            </li>
+            <li>
+                <a href="kimi_no_nawa.html">Page 1</a>
+            </li>
+            <li>
+                <a href="tenki_no_ko.html">Page 2</a>
+            </li>
+             <li>
+                <a href="SUZUME.html">Page 3</a>
+            </li>
+             <li>
+                <a href="the_garden_of_words.html">Page 4</a>
+            </li>
+             <li>
+                <a href="5cmpersecond.html">Page 5</a>
+            </li>
+        </ul>
+    </nav>
+    <!-- HERO SECTION -->
+  <section class="text-white text-center p-5 position-relative">
+    
+    <!-- Background dengan overlay -->
+    <div style="
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), 
+                    url('wpper.jpg') center/cover no-repeat;
+        z-index: 0;
+    "></div>
+    
+    <!-- Konten -->
+    <div class="container position-relative" style="z-index: 1;">
+        <h1>WELCOME TO KITZULIST</h1>
+        <p class="lead">Website Seputar Rekomendasi film karya "Makoto Shinkai"</p>
+    </div>
+</section>
+    <!-- CONTENT -->
+<div class="container my-5">
+    <div class="row">
+        <div class="col-md-3 mb-3">
+            <a href="makoto.html" class="text-decoration-none">
+                <div class="card shadow text-white" style="background-color: #111; height: 150px;">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                        <h5 class="card-title">About Makoto Shinkai</h5>
+                        <p class="card-text mb-0">click here</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3 mb-3">
+            <a href="aboutus.html" class="text-decoration-none">
+                <div class="card shadow text-white" style="background-color: #111; height: 150px;">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                        <h5 class="card-title">About this web</h5>
+                        <p class="card-text mb-0">click here</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+      <div class="col-md-3 mb-3">
+            <a href="UAS_Semester1.html" class="text-decoration-none">
+                <div class="card shadow text-white" style="background-color: #111; height: 150px;">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                        <h5 class="card-title">Gallery</h5>
+                        <p class="card-text mb-0">click here</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3 mb-3">
+            <a href="contact.html">
+            <div class="card shadow text-white" style="background-color: #111; height: 150px;">
+                <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                    <h5 class="card-title">Contact US</h5>
+                    <p class="card-text mb-0">Click here</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</a>
+  <!-- CONTENT -->
+
+    <!-- FOOTER -->
+   <footer class="bg-dark text-white text-center p-3">
+    <!-- Widget Waktu -->
+    <div class="mb-2">
+        <div style="display: inline-block; padding: 5px 15px; background: rgba(255,255,255,0.1); border-radius: 5px;">
+            <span id="simple-clock">
+                Loading waktu...
+            </span>
+        </div>
+    </div>
+    
+    © Muhammad Faldo Al Rosyid (251011700301)
+    
+    <script>
+        function updateSimpleClock() {
+            var waktu = new Date();
+            
+            // Format: HH:MM
+            var jam = waktu.getHours().toString().padStart(2, '0');
+            var menit = waktu.getMinutes().toString().padStart(2, '0');
+            var waktuDisplay = jam + ":" + menit;
+            
+            // Format tanggal Indonesia singkat
+            var tanggal = waktu.getDate() + "/" + 
+                         (waktu.getMonth() + 1) + "/" + 
+                         waktu.getFullYear();
+            
+            // Gabungkan
+            document.getElementById("simple-clock").innerHTML = 
+                tanggal + " | " + waktuDisplay;
+        }
+        
+        // Jalankan pertama kali
+        updateSimpleClock();
+        
+        // Update setiap 30 detik (30000ms = 30 detik)
+        setInterval(updateSimpleClock, 30000);
+    </script>
+</footer>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 Centimeters Per Second - Kitzulist</title>
+    <link rel="stylesheet" href="UAS_Semester1.css">
+    <style>
+              body {
+            background-color: #0c1a2d;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+             background-image: linear-gradient(to bottom, #0c1a2d, #1a365d);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(0,0,0,0.3);
+            padding: 20px;
+            border-radius: 15px;
+        }
+        
+        .quick-info {
+            background: rgba(147, 112, 219, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid rgba(147, 112, 219, 0.3);
+            margin-bottom: 20px;
+        }
+        
+        .section {
+            margin: 30px 0;
+            padding: 20px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+        }
+        
+        .character-card {
+            text-align: center;
+            padding: 15px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        
+        .character-card:hover {
+            transform: translateY(-5px);
+            background: rgba(147, 112, 219, 0.1);
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .gallery-grid img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        
+        .gallery-grid img:hover {
+            transform: scale(1.05);
+        }
+        
+        .progress-bar {
+            background: #333;
+            height: 6px;
+            border-radius: 3px;
+            margin: 5px 0 15px 0;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            background: #9370db;
+            height: 100%;
+            border-radius: 3px;
+        }
+        
+        .quote-box {
+            background: linear-gradient(135deg, rgba(147,112,219,0.2), rgba(138,43,226,0.2));
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 5px solid #9370db;
+            text-align: center;
+            font-style: italic;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(147,112,219,0.05);
+            border-radius: 10px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .btn-prev {
+            background: #4b0082;
+            color: white;
+        }
+        
+        .btn-next {
+            background: #9370db;
+            color: white;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        
+        h1, h2, h3 {
+            color: #9370db;
+        }
+        
+        h2 {
+            border-left: 4px solid #9370db;
+            padding-left: 10px;
+        }
+        
+        .sakura-bg {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .sakura-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(255, 182, 193, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(255, 182, 193, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <!--Banner-->
+    <div style="
+        background: linear-gradient(135deg, #0a192f, #1a365d);
+        text-align: center;
+        padding: 15px 0;
+        border-bottom: 3px solid #1e90ff;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    ">
+        <img src="logobaru.png" 
+             alt="KITZULIST" 
+             style="height: 75px; width: auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));">
+        
+        <div style="
+            display: inline-block;
+            margin-top: 8px;
+            padding: 4px 15px;
+            background: rgba(30, 144, 255, 0.1);
+            border-radius: 12px;
+            border: 1px solid rgba(30, 144, 255, 0.3);
+        ">
+            <span style="color: #00bfff; font-size: 14px;">✦</span>
+            <span style="color: white; font-size: 13px; margin: 0 8px;">Anime Cinema Universe</span>
+            <span style="color: #00bfff; font-size: 14px;">✦</span>
+        </div>
+    </div>
+    <!--Banner-->
+    
+    <!-- NAVBAR -->
+    <nav>
+        <div class="">
+            <img src="Raposa guerreira.jpg" alt="logo">
+        </div>
+          <ul>
+            <li>
+                <a href="index.html">home</a>
+            </li>
+            <li>
+                <a href="kimi_no_nawa.html">Page 1</a>
+            </li>
+            <li>
+                <a href="tenki_no_ko.html">Page 2</a>
+            </li>
+            <li>
+                <a href="SUZUME.html">Page 3</a>
+            </li>
+          <li>
+                <a href="the_garden_of_words.html">Page 4</a>
+            </li>
+             <li>
+                <a href="5cmpersecond.html">Page 5</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container sakura-bg">
+        
+        <!-- ========== HEADER FILM ========== -->
+        <div style="text-align: center; margin: 30px 0;">
+            <img src="5cm.jpg" 
+                 alt="5 Centimeters Per Second Poster"
+                 style="
+                     width: 250px; 
+                     height: 350px;
+                     object-fit: cover;
+                     border-radius: 10px; 
+                     border: 3px solid #9370db;
+                     box-shadow: 0 10px 30px rgba(147, 112, 219, 0.4);
+                 ">
+            <h1 style="color: #9370db; font-size: 36px; margin: 15px 0 5px 0;">
+                5 Centimeters Per Second <span style="font-size: 20px; color: #d8bfd8;">(秒速5センチメートル)</span>
+            </h1>
+            <p style="color: #d8bfd8; font-size: 18px; margin: 0;">Byousoku 5 Centimeter</p>
+            <div style="margin-top: 10px;">
+                <span style="color: gold; font-size: 20px;">★★★★★</span>
+                <span style="color: white; margin-left: 10px; font-size: 18px;">8.1/10</span>
+            </div>
+            <div style="margin-top: 10px;">
+                <span style="display: inline-block; padding: 5px 15px; background: rgba(147, 112, 219, 0.2); border-radius: 15px; margin: 5px; font-size: 14px; border: 1px solid rgba(147, 112, 219, 0.3);">Romance</span>
+                <span style="display: inline-block; padding: 5px 15px; background: rgba(147, 112, 219, 0.2); border-radius: 15px; margin: 5px; font-size: 14px; border: 1px solid rgba(147, 112, 219, 0.3);">Drama</span>
+                <span style="display: inline-block; padding: 5px 15px; background: rgba(147, 112, 219, 0.2); border-radius: 15px; margin: 5px; font-size: 14px; border: 1px solid rgba(147, 112, 219, 0.3);">Coming-of-Age</span>
+                <span style="display: inline-block; padding: 5px 15px; background: rgba(147, 112, 219, 0.2); border-radius: 15px; margin: 5px; font-size: 14px; border: 1px solid rgba(147, 112, 219, 0.3);">Melancholy</span>
+            </div>
+        </div>
+
+        <!-- ========== QUICK INFO BOX ========== -->
+        <div class="quick-info">
+            <h3 style="color: #9370db; border-bottom: 2px solid #9370db; padding-bottom: 5px; margin-top: 0;">
+                📋 Film Details
+            </h3>
+            
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+                <p><strong style="color: #d8bfd8;">🎬 Sutradara:</strong> Makoto Shinkai</p>
+                <p><strong style="color: #d8bfd8;">📅 Tahun:</strong> 2007</p>
+                <p><strong style="color: #d8bfd8;">⏱️ Durasi:</strong> 63 menit</p>
+                <p><strong style="color: #d8bfd8;">🎵 Musik:</strong> Tenmon</p>
+                <p><strong style="color: #d8bfd8;">🏆 Rating:</strong> <span style="color: gold;">★★★★★</span> 8.1/10</p>
+                <p><strong style="color: #d8bfd8;">📊 Box Office:</strong> ¥1.0 miliar</p>
+                <p><strong style="color: #d8bfd8;">🎞️ Studio:</strong> CoMix Wave Films</p>
+                <p><strong style="color: #d8bfd8;">📍 Lokasi:</strong> Tokyo, Tanegashima</p>
+            </div>
+        </div>
+
+        <!-- ========== SINOPSIS ========== -->
+        <div class="section">
+            <h2>📖 Sinopsis</h2>
+            <p style="color: #f0f0f0; line-height: 1.7; text-align: justify;">
+                5 Centimeters Per Second adalah film trilogi yang dibagi menjadi tiga bagian: "Cherry Blossom", "Cosmonaut", dan "5 Centimeters Per Second".
+                <br><br>
+                <strong>Episode 1: Cherry Blossom</strong><br>
+                Mengisahkan Takaki Toono dan Akari Shinohara, dua sahabat kecil yang sangat dekat. Mereka menghabiskan waktu bersama, berbagi buku, dan menikmati keindahan bunga sakura yang jatuh dengan kecepatan 5 cm per detik. Namun, Akari harus pindah ke Tochigi karena pekerjaan orang tuanya, memisahkan mereka.
+                <br><br>
+                <strong>Episode 2: Cosmonaut</strong><br>
+                Bertahun kemudian, Takaki sekarang menjadi siswa SMA di Tanegashima. Kakeru, seorang gadis yang menyukainya, berusaha mendekati Takaki yang selalu melamun dan menatap jauh ke angkasa. Dia menyadari bahwa hati Takaki masih terpaut pada seseorang di masa lalu.
+                <br><br>
+                <strong>Episode 3: 5 Centimeters Per Second</strong><br>
+                Takaki kini bekerja di Tokyo sebagai programmer. Hidupnya terasa hampa dan monoton. Suatu hari, dia menyadari bahwa meskipun waktu terus berlalu, perasaannya terhadap Akari tidak pernah benar-benar hilang. Film berakhir dengan scene ikonik di perlintasan kereta api, di mana mereka hampir bertemu lagi setelah bertahun-tahun terpisah.
+                <br><br>
+                Film ini menggambarkan dengan indah tentang jarak, waktu, dan bagaimana manusia berubah seiring berjalannya kehidupan.
+            </p>
+        </div>
+
+        <!-- ========== QUOTE ICONIC ========== -->
+        <div class="quote-box">
+            <p style="color: white; font-size: 22px; margin: 0;">
+                "Kita mungkin pernah saling mencintai. Tapi pada akhirnya kita tidak bisa bersama. 
+                Bukan karena salah satu dari kita berubah. Tapi karena kita berdua tumbuh menjadi orang yang berbeda."
+            </p>
+            <p style="color: #d8bfd8; font-size: 16px; margin: 10px 0 0 0;">
+                - Takaki Toono, 5 Centimeters Per Second
+            </p>
+        </div>
+
+        <!-- ========== KARAKTER UTAMA ========== -->
+        <div class="section">
+            <h2>👥 Karakter Utama</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 20px;">
+                <div class="character-card">
+                    <img src="5cm1.jpg" 
+                         alt="Takaki Toono"
+                         style="
+                             width: 150px; 
+                             height: 150px; 
+                             margin: 0 auto 15px auto;
+                             border-radius: 50%;
+                             object-fit: cover;
+                             border: 3px solid #9370db;
+                             box-shadow: 0 5px 15px rgba(147, 112, 219, 0.3);
+                         ">
+                    <h3 style="color: white; margin: 0 0 5px 0; font-size: 22px;">Takaki Toono</h3>
+                    <p style="color: #9370db; margin: 0; font-size: 16px; font-weight: bold;">(遠野 貴樹)</p>
+                    <p style="color: #aaa; margin: 5px 0; font-size: 14px;">13 → 27 tahun</p>
+                    <p style="color: #888; font-size: 14px; margin-top: 10px; line-height: 1.5;">
+                        Protagonis utama yang tumbuh dari anak laki-laki pemalu menjadi pria dewasa yang terasing. 
+                        Sejak kecil dia memiliki hubungan khusus dengan Akari. Meski waktu dan jarak memisahkan mereka, 
+                        Takaki tidak pernah bisa melupakan perasaannya. Dia hidup dengan rasa kerinduan yang dalam 
+                        dan kesulitan bergerak maju dari masa lalu.
+                    </p>
+                    <div style="
+                        margin-top: 15px;
+                        padding: 8px 15px;
+                        background: rgba(147, 112, 219, 0.1);
+                        border-radius: 20px;
+                        display: inline-block;
+                    ">
+                        <span style="color: #9370db;">The Dreamer 🌸</span>
+                    </div>
+                </div>
+                <div class="character-card">
+                    <img src="5cm2.jpg" 
+                         alt="Akari Shinohara"
+                         style="
+                             width: 150px; 
+                             height: 150px; 
+                             margin: 0 auto 15px auto;
+                             border-radius: 50%;
+                             object-fit: cover;
+                             border: 3px solid #ffb6c1;
+                             box-shadow: 0 5px 15px rgba(255, 182, 193, 0.3);
+                         ">
+                    <h3 style="color: white; margin: 0 0 5px 0; font-size: 22px;">Akari Shinohara</h3>
+                    <p style="color: #ffb6c1; margin: 0; font-size: 16px; font-weight: bold;">(篠原 明里)</p>
+                    <p style="color: #aaa; margin: 5px 0; font-size: 14px;">13 → 27 tahun</p>
+                    <p style="color: #888; font-size: 14px; margin-top: 10px; line-height: 1.5;">
+                        Sahabat masa kecil Takaki yang harus pindah karena pekerjaan orang tuanya. Dia lembut, 
+                        penyayang, dan memiliki ikatan emosional yang kuat dengan Takaki. Meski berpisah, 
+                        dia terus menulis surat untuk Takaki. Seiring waktu, Akari belajar menerima realitas 
+                        dan melanjutkan hidupnya, meski kenangan tentang Takaki tetap tersimpan di hatinya.
+                    </p>
+                    <div style="
+                        margin-top: 15px;
+                        padding: 8px 15px;
+                        background: rgba(255, 182, 193, 0.1);
+                        border-radius: 20px;
+                        display: inline-block;
+                    ">
+                        <span style="color: #ffb6c1;">Cherry Blossom Girl 💌</span>
+                    </div>
+                </div>
+                <div class="character-card">
+                    <img src="Sumida kanae.jpg" 
+                         alt="Kanae Sumida"
+                         style="
+                             width: 150px; 
+                             height: 150px; 
+                             margin: 0 auto 15px auto;
+                             border-radius: 50%;
+                             object-fit: cover;
+                             border: 3px solid #98fb98;
+                             box-shadow: 0 5px 15px rgba(152, 251, 152, 0.3);
+                         ">
+                    <h3 style="color: white; margin: 0 0 5px 0; font-size: 22px;">Kanae Sumida</h3>
+                    <p style="color: #98fb98; margin: 0; font-size: 16px; font-weight: bold;">(澄田 花苗)</p>
+                    <p style="color: #aaa; margin: 5px 0; font-size: 14px;">17 tahun</p>
+                    <p style="color: #888; font-size: 14px; margin-top: 10px; line-height: 1.5;">
+                        Siswa SMA di Tanegashima yang menyukai Takaki. Dia berusaha mendekati Takaki dengan berbagai cara, 
+                        termasuk belajar berselancar karena tahu Takaki menyukainya. Kanae mewakili cinta yang tidak 
+                        terbalas dan realitas bahwa tidak semua perasaan mendapatkan respons yang sama. Dia akhirnya 
+                        menyadari bahwa hati Takaki sudah milik orang lain dan belajar untuk melepaskan.
+                    </p>
+                    <div style="
+                        margin-top: 15px;
+                        padding: 8px 15px;
+                        background: rgba(152, 251, 152, 0.1);
+                        border-radius: 20px;
+                        display: inline-block;
+                    ">
+                        <span style="color: #98fb98;">Unrequited Love 🏄‍♀️</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== GALLERY SCENE ========== -->
+        <div class="section">
+            <h2>SCENE</h2>
+            
+            <div class="gallery-grid">
+                <!-- Scene 1 -->
+                <div>
+                    <img src="scene5cm1.jpg" 
+                         alt="scene1">
+                </div>
+                <!-- Scene 2 -->
+                <div>
+                    <img src="scene5cm2.jpg" 
+                         alt="scene2">
+                </div>
+                <!-- Scene 3 -->
+                <div>
+                    <img src="scene5cm3.jpg" 
+                         alt="scene3">
+                </div>
+                <!-- Scene 4 -->
+                <div>
+                    <img src="Tohno Takaki x Akari Shinohara.jpg" 
+                         alt="Final Scene">
+                </div>
+            </div>
+        </div>
+           <!-- ========== FOOTER ========== -->
+    <footer style="
+    background: #f5f5f5;
+    color: #111;
+    text-align: center;
+    padding: 15px;
+">
+
+    <!-- Widget Waktu -->
+    <div style="margin-bottom: 8px;">
+        <div style="
+            display: inline-block;
+            padding: 6px 18px;
+            background: #1e90ff;
+            color: white;
+            border-radius: 6px;
+            font-weight: 500;
+        ">
+            <span id="simple-clock">
+                Loading waktu...
+            </span>
+        </div>
+    </div>
+
+    © Muhammad Faldo Al Rosyid (251011700301)
+
+    <script>
+        function updateSimpleClock() {
+            var waktu = new Date();
+
+            var jam = waktu.getHours().toString().padStart(2, '0');
+            var menit = waktu.getMinutes().toString().padStart(2, '0');
+
+            var tanggal = waktu.getDate() + "/" + 
+                          (waktu.getMonth() + 1) + "/" + 
+                          waktu.getFullYear();
+
+            document.getElementById("simple-clock").innerHTML =
+                tanggal + " | " + jam + ":" + menit;
+        }
+
+        updateSimpleClock();
+        setInterval(updateSimpleClock, 30000);
+    </script>
+</footer>
+    </center>
+    </div>
+</body>
+</html>

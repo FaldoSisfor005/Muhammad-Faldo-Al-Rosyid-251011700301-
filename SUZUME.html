@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suzume - Kitzulist</title>
+    <link rel="stylesheet" href="UAS_Semester1.css">
+    <style>
+        body {
+            background-color: #0c1a2d;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+             background-image: linear-gradient(to bottom, #0c1a2d, #1a365d);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(0,0,0,0.3);
+            padding: 20px;
+            border-radius: 15px;
+        }
+        
+        .quick-info {
+            background: rgba(147, 112, 219, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid rgba(147, 112, 219, 0.3);
+            margin-bottom: 20px;
+        }
+        
+        .section {
+            margin: 30px 0;
+            padding: 20px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+        }
+        
+        .character-card {
+            text-align: center;
+            padding: 15px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        
+        .character-card:hover {
+            transform: translateY(-5px);
+            background: rgba(147, 112, 219, 0.1);
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .gallery-grid img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        
+        .gallery-grid img:hover {
+            transform: scale(1.05);
+        }
+        
+        .progress-bar {
+            background: #333;
+            height: 6px;
+            border-radius: 3px;
+            margin: 5px 0 15px 0;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            background: #9370db;
+            height: 100%;
+            border-radius: 3px;
+        }
+        
+        .quote-box {
+            background: linear-gradient(135deg, rgba(147,112,219,0.2), rgba(138,43,226,0.2));
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 5px solid #9370db;
+            text-align: center;
+            font-style: italic;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(147,112,219,0.05);
+            border-radius: 10px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .btn-prev {
+            background: #4b0082;
+            color: white;
+        }
+        
+        .btn-next {
+            background: #9370db;
+            color: white;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        
+        h1, h2, h3 {
+            color: #9370db;
+        }
+        
+        h2 {
+            border-left: 4px solid #9370db;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+      <!--Banner-->
+    <div style="
+    background: linear-gradient(135deg, #0a192f, #1a365d);
+    text-align: center;
+    padding: 15px 0;
+    border-bottom: 3px solid #1e90ff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+">
+    <!-- LOGO LEBIH BESAR -->
+    <img src="logobaru.png" 
+         alt="KITZULIST" 
+         style="height: 75px; width: auto; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));">
+    
+    <!-- SUBTITLE TETAP SAMA (ANIME VIBES) -->
+    <div style="
+        display: inline-block;
+        margin-top: 8px;
+        padding: 4px 15px;
+        background: rgba(30, 144, 255, 0.1);
+        border-radius: 12px;
+        border: 1px solid rgba(30, 144, 255, 0.3);
+    ">
+        <span style="color: #00bfff; font-size: 14px;">✦</span>
+        <span style="color: white; font-size: 13px; margin: 0 8px;">Anime Cinema Universe</span>
+        <span style="color: #00bfff; font-size: 14px;">✦</span>
+    </div>
+</div>
+    <!--Banner-->
+    <!-- NAVBAR -->
+     <nav>
+        <div class="">
+            <img src="Raposa guerreira.jpg" alt="logo">
+        </div>
+        <ul>
+            <li>
+                <a href="index.html">home</a>
+            </li>
+            <li>
+                <a href="kimi_no_nawa.html">Page 1</a>
+            </li>
+            <li>
+                <a href="tenki_no_ko.html">Page 2</a>
+            </li>
+            <li>
+                <a href="SUZUME.html">Page 3</a>
+            </li>
+          <li>
+                <a href="the_garden_of_words.html">Page 4</a>
+            </li>
+             <li>
+                <a href="5cmpersecond.html">Page 5</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        
+        <!-- ========== HEADER FILM ========== -->
+        <div style="text-align: center; margin: 30px 0;">
+            <img src="Suzume No Tojimari.jpg" 
+                 alt="Suzume Poster"
+                 style="
+                     width: 250px; 
+                     height: 350px;
+                     object-fit: cover;
+                     border-radius: 10px; 
+                     border: 3px solid #9370db;
+                     box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+                 ">
+            <h1 style="color: white; font-size: 36px; margin: 15px 0 5px 0;">
+                Suzume <span style="font-size: 20px; color: #aaa;">(すずめの戸締まり)</span>
+            </h1>
+            <p style="color: #d8bfd8; font-size: 18px; margin: 0;">Suzume no Tojimari</p>
+            <div style="margin-top: 10px;">
+                <span style="color: gold; font-size: 20px;">★★★★☆</span>
+                <span style="color: white; margin-left: 10px; font-size: 18px;">7.8/10</span>
+            </div>
+        </div>
+
+        <!-- ========== QUICK INFO BOX ========== -->
+        <div class="quick-info">
+            <h3 style="color: #9370db; border-bottom: 2px solid #9370db; padding-bottom: 5px; margin-top: 0;">
+                📋 Film Details
+            </h3>
+            
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+                <p><strong style="color: #d8bfd8;">🎬 Sutradara:</strong> Makoto Shinkai</p>
+                <p><strong style="color: #d8bfd8;">📅 Tahun:</strong> 2022</p>
+                <p><strong style="color: #d8bfd8;">⏱️ Durasi:</strong> 122 menit</p>
+                <p><strong style="color: #d8bfd8;">🎵 Musik:</strong> RADWIMPS & Kazuma Jinnouchi</p>
+                <p><strong style="color: #d8bfd8;">🏆 Rating:</strong> <span style="color: gold;">★★★★☆</span> 7.8/10</p>
+                <p><strong style="color: #d8bfd8;">💰 Box Office:</strong> ¥14.78 miliar</p>
+                <p><strong style="color: #d8bfd8;">🎞️ Studio:</strong> CoMix Wave Films</p>
+                <p><strong style="color: #d8bfd8;">📍 Lokasi:</strong> Berbagai kota di Jepang</p>
+            </div>
+        </div>
+
+        <!-- ========== SINOPSIS ========== -->
+        <div class="section">
+            <h2>📖 Sinopsis</h2>
+            <p style="color: #f0f0f0; line-height: 1.7; text-align: justify;">
+                Suzume no Tojimari mengisahkan perjalanan Suzume Iwato, seorang gadis berusia 17 tahun yang tinggal 
+                di sebuah kota tenang di Kyushu. Suatu hari, dia bertemu dengan seorang pemuda misterius bernama Souta 
+                yang sedang mencari "pintu". 
+                <br><br>
+                Tanpa sengaja, Suzume membuka sebuah pintu tua yang mengarah ke "Dunia Lain", tempat yang menjadi 
+                sumber bencana gempa bumi di Jepang. Dari pintu itu keluar "cacing" yang dapat menyebabkan gempa dahsyat. 
+                Souta ternyata adalah "Closer" yang bertugas menutup pintu-pintu tersebut.
+                <br><br>
+                Namun, sebuah kutukan mengubah Souta menjadi kursi tua! Suzume pun memutuskan untuk membantu Souta 
+                (yang sekarang berbentuk kursi) dalam perjalanan menutup berbagai pintu di seluruh Jepang. 
+                Perjalanan ini membawa mereka melintasi berbagai lokasi bersejarah yang pernah dilanda gempa bumi.
+                <br><br>
+                Film ini tidak hanya petualangan fantasi, tetapi juga cerita tentang penyembuhan trauma, menghadapi 
+                kehilangan, dan menemukan makna kehidupan setelah bencana.
+            </p>
+        </div>
+
+        <!-- ========== QUOTE ICONIC ========== -->
+        <div class="quote-box">
+            <p style="color: white; font-size: 22px; margin: 0;">
+                "Aku tidak takut dengan apa yang ada di depan, tapi dengan apa yang kutinggalkan."
+            </p>
+            <p style="color: #d8bfd8; font-size: 16px; margin: 10px 0 0 0;">
+                - Suzume Iwato, Suzume no Tojimari
+            </p>
+        </div>
+<div class="section">
+    <h2>👥 Karakter Utama</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 20px;">
+        <!-- KARAKTER 1: SUZUME -->
+        <div class="character-card">
+            <img src="Suzume Iwato.jpg" 
+                 alt="suzume"
+                 style="
+                     width: 150px; 
+                     height: 150px; 
+                     margin: 0 auto 15px auto;
+                     border-radius: 50%;
+                     object-fit: cover;
+                     border: 3px solid #1e90ff;
+                     box-shadow: 0 5px 15px rgba(30, 144, 255, 0.3);
+                 ">
+            <h3 style="color: white; margin: 0 0 5px 0; font-size: 22px;">Suzume Iwato</h3>
+            <p style="color: #00bfff; margin: 0; font-size: 16px; font-weight: bold;">(岩戸 鈴芽)</p>
+            <p style="color: #aaa; margin: 5px 0; font-size: 14px;">17 tahun</p>
+            <p style="color: #888; font-size: 14px; margin-top: 10px; line-height: 1.5;">
+                Siswi SMA dari kota kecil di Kyushu yang kehilangan ibunya dalam gempa besar 12 tahun lalu.
+                Tinggal bersama bibinya, Tamaki. Hidupnya berubah total ketika secara tidak sengaja membuka 
+                "Pintu Bencana" yang mengeluarkan "cacing" penyebab gempa.
+            </p>
+            <div style="
+                margin-top: 15px;
+                padding: 8px 15px;
+                background: rgba(30, 144, 255, 0.1);
+                border-radius: 20px;
+                display: inline-block;
+            ">
+                <span style="color: #00bfff;">the girl from kyushu🌊</span>
+            </div>
+        </div> <!-- TUTUP SUZUME -->
+        
+        <!-- KARAKTER 2: SOUTA -->
+        <div class="character-card">
+            <img src="Souta Munakata icons - Suzume icons _ Suzume no Tojimari icons.jpg" 
+                 alt="Souta Munakata"
+                 style="
+                     width: 150px; 
+                     height: 150px; 
+                     margin: 0 auto 15px auto;
+                     border-radius: 50%;
+                     object-fit: cover;
+                     border: 3px solid #9370db;  <!-- Warna ungu untuk Souta -->
+                     box-shadow: 0 5px 15px rgba(147, 112, 219, 0.3);
+                 ">
+            <h3 style="color: white; margin: 0 0 5px 0; font-size: 22px;">Souta Munakata</h3>
+            <p style="color: #9370db; margin: 0; font-size: 16px; font-weight: bold;">(宗像 草太)</p>
+            <p style="color: #aaa; margin: 5px 0; font-size: 14px;">22 tahun</p>
+            <p style="color: #888; font-size: 14px; margin-top: 10px; line-height: 1.5;">
+                Mahasiswa yang bekerja paruh waktu sebagai "Closer". Tenang, serius, dan bertanggung jawab. 
+                Nasibnya berubah drastis ketika dikutuk menjadi kursi tiga kaki tua.
+            </p>
+            <div style="
+                margin-top: 15px;
+                padding: 8px 15px;
+                background: rgba(147, 112, 219, 0.1);
+                border-radius: 20px;
+                display: inline-block;
+            ">
+                <span style="color: #9370db;">Chair Wizard🪑</span>  <!-- Label berbeda -->
+            </div>
+        </div> <!-- TUTUP SOUTA -->
+        
+        <!-- KARAKTER 3: DAIJIN -->
+        <div class="character-card">
+            <img src="Daijin.jpg" 
+                 alt="Daijin"
+                 style="
+                     width: 150px; 
+                     height: 150px; 
+                     margin: 0 auto 15px auto;
+                     border-radius: 50%;
+                     object-fit: cover;
+                     border: 3px solid #ff69b4;
+                     box-shadow: 0 5px 15px rgba(255, 105, 180, 0.3);
+                 ">
+            <h3 style="color: white; margin: 0 0 5px 0; font-size: 22px;">DAIJIN</h3>
+            <p style="color: #ff69b4; margin: 0; font-size: 16px; font-weight: bold;">(ダイジン)</p>
+            <p style="color: #aaa; margin: 5px 0; font-size: 14px;">?</p>
+            <p style="color: #888; font-size: 14px; margin-top: 10px; line-height: 1.5;">
+                Makhluk misterius berbentuk kucing putih. Awalnya adalah patung kucing di kuil yang hidup kembali.
+                Sebenarnya adalah "Keystone" - penjaga utama yang menahan kekuatan bencana dari Dunia Lain.
+            </p>
+            <div style="
+                margin-top: 15px;
+                padding: 8px 15px;
+                background: rgba(255, 105, 180, 0.1);
+                border-radius: 20px;
+                display: inline-block;
+            ">
+                <span style="color: #ff69b4;">Mystery Cat🐱</span>  <!-- Label berbeda -->
+            </div>
+        </div> <!-- TUTUP DAIJIN -->
+        
+    </div> <!-- TUTUP GRID -->
+</div> <!-- TUTUP SECTION -->
+        <!-- ========== GALLERY SCENE ========== -->
+        <div class="section">
+            <h2>🎨 Scene Terkenal</h2>
+            
+            <div class="gallery-grid">
+                <!-- Scene 1 -->
+                <div>
+                    <img src="scene1.jpg" 
+                         alt="Scene">
+                </div>
+                <!-- Scene 2 -->
+                <div>
+                    <img src="scene2.jpg" 
+                         alt="scene2">
+                </div>
+                <!-- Scene 3 -->
+                <div>
+                    <img src="scene3.jpg" 
+                         alt="scene3">
+                </div>
+                
+                <!-- Scene 4 -->
+                <div>
+                    <img src="scene4.jpg" 
+                         alt="scene4">
+                </div>
+            </div>
+        </div>
+    </div> <!-- End Container -->
+
+   <!-- ========== FOOTER ========== -->
+    <footer style="
+    background: #f5f5f5;
+    color: #111;
+    text-align: center;
+    padding: 15px;
+">
+
+    <!-- Widget Waktu -->
+    <div style="margin-bottom: 8px;">
+        <div style="
+            display: inline-block;
+            padding: 6px 18px;
+            background: #1e90ff;
+            color: white;
+            border-radius: 6px;
+            font-weight: 500;
+        ">
+            <span id="simple-clock">
+                Loading waktu...
+            </span>
+        </div>
+    </div>
+
+    © Muhammad Faldo Al Rosyid (251011700301)
+
+    <script>
+        function updateSimpleClock() {
+            var waktu = new Date();
+
+            var jam = waktu.getHours().toString().padStart(2, '0');
+            var menit = waktu.getMinutes().toString().padStart(2, '0');
+
+            var tanggal = waktu.getDate() + "/" + 
+                          (waktu.getMonth() + 1) + "/" + 
+                          waktu.getFullYear();
+
+            document.getElementById("simple-clock").innerHTML =
+                tanggal + " | " + jam + ":" + menit;
+        }
+
+        updateSimpleClock();
+        setInterval(updateSimpleClock, 30000);
+    </script>
+</footer>
+    </center>
+</body>
+</html>
